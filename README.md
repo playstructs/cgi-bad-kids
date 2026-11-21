@@ -91,6 +91,20 @@ site's, badkids.com's archive at `badkidsweb.storage.googleapis.com`, or the
 collection's `ipfs://QmbGvE3w…/<id>.jpg`) is shown from this site's copy: the
 same picture, a fraction of the size of the 2048px originals.
 
+## Sign-up and the player's key
+
+Sign-up has no recovery key section: once the player has chosen their name,
+the page makes their account's key (a mnemonic) and creates the account
+straight away, with nothing shown, explained or confirmed, and goes on to
+Success. If the guild can't create it, the player sees why and can try again
+with the same key (`bk/runtime/account.js`).
+
+The Account page has **Download Player** where webapp has **Log Out**: a text
+file, `<name>-<player id>.structs-player.txt`, holding the mnemonic this
+browser signs with. After sign-up that is the account's own key; after an
+account recovery or a device activation it is this browser's device key, which
+can recover the player too, for as long as that device stays registered.
+
 ## Which guild
 
 The site is Bad Kids': its guild is `0-11`, fixed in `webpack.config.js`
