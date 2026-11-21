@@ -9,7 +9,7 @@ there is no translation layer.
 | `patches.cjs` | `[exact upstream text, replacement]` pairs per upstream file: the guild connection, recovery, the telemetry name, players' own pictures, the Bad Kid picker, and Bad Kids in place of SN Corp in sign-up and the tutorial |
 | `runtime/` | Loaded before webapp's entry as `__bk`: `guild` (`guild.js`, the services of the guild the page plays through, Bad Kids `0-11`), `recovery` (`recovery.js`, moving a recovered player of another guild into it), `pfp` (`pfp.js`, every portrait showing the player's `pfp` URL over the generated one, and setting a sign-up Bad Kid as `pfp` on chain) and `kids` (`kids.js`, the Bad Kids gallery, at sign-up and on a member's own profile) |
 | `public/` | Static files served over webapp's: `guild.json` (guild `0-11`'s on-chain endpoint), `favicon.ico`, and `bk/` with `bk.css`, the sign-up badge, the guild logo, icons and `kids/`, every Bad Kid's picture |
-| `page.cjs` | Renders webapp's Twig page (`templates/`) to `index.html`, adding the icons and `bk.css` |
+| `page.cjs` | Renders webapp's Twig page (`templates/`) to `index.html`, adding Google Tag Manager (`GTM-58HZKHDD`), the icons and `bk.css` |
 | `overlay.cjs`, `loader.cjs` | Apply `patches.cjs` to each source file webpack reads |
 | `check.cjs` | `npm run check` / `npm test`: stale or orphaned patches, SN Corp left on screen, guild.json against `GUILD_ID` |
 
