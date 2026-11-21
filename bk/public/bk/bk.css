@@ -45,6 +45,7 @@ html img.pfp-viewer-layer.bk-pfp-url {
 .bk-kid-picker {
   position: absolute;
   inset: 0;
+  box-sizing: border-box;
   z-index: 5;
   display: flex;
   flex-direction: column;
@@ -145,4 +146,34 @@ html img.pfp-viewer-layer.bk-pfp-url {
   .bk-kid-tile.bk-mod-found::after {
     animation: none;
   }
+}
+
+/*
+ * The player's own profile: the edit button on the portrait's corner opens the
+ * gallery over the profile (bk/runtime/kids.js), and a line under the player's
+ * name says how the change went.
+ */
+.bk-kid-picker-host,
+.profile-header-image-container {
+  position: relative;
+}
+
+.bk-profile-pfp-edit {
+  position: absolute;
+  right: -4px;
+  bottom: -4px;
+  z-index: 1;
+  display: flex;
+  padding: 2px;
+  background: var(--page-background);
+  text-decoration: none;
+}
+
+.bk-profile-pfp-edit.sui-mod-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.bk-profile-pfp-status {
+  margin-top: var(--spacing-sm);
 }

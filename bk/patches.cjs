@@ -127,6 +127,12 @@ module.exports = {
     ['  renderHTML() {\n    if (!this.pfp) {', '  renderHTML() {\n    return __bk.pfp.html(this.pfp, this.renderLayersHTML());\n  }\n\n  renderLayersHTML() {\n    if (!this.pfp) {'],
   ],
   // Sign-up: "Choose Bad Kid" beside the generated picture (bk/runtime/kids.js).
+  // The player's own profile: the edit button on their portrait opens the
+  // gallery (bk/runtime/kids.js), and the picture they choose is set on chain.
+  'js/view_models/account/AccountProfileViewModel.js': [
+    ['<div class="profile-header-image">${pfpViewer.renderHTML()}</div>', '<div class="profile-header-image">${pfpViewer.renderHTML()}</div>${__bk.kids.profileButtonHTML(this)}'],
+    ['  initPageCode() {\n    if (this.isOwnProfile) {\n', '  initPageCode() {\n    if (this.isOwnProfile) {\n      __bk.kids.mountProfile(this, MenuPage);\n'],
+  ],
   'js/view_models/signup/SetUsernameViewModel.js': [
     ...navLabel,
     ['    this.initPfp();\n', '    this.initPfp();\n    __bk.kids.mount(this, MenuPage);\n'],
