@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "bad-kids",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "port": 5197
+    },
+    {
+      "name": "bad-kids-dist",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "5198", "--directory", "dist"],
+      "port": 5198
+    }
+  ]
+}

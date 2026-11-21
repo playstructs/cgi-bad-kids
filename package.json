@@ -1,0 +1,20 @@
+{
+  "name": "structs-badkids",
+  "version": "0.1.0",
+  "private": true,
+  "description": "badkids.structs.zone: the structs-webapp game client for the Bad Kids guild, built from the structs-webapp submodule with the bk/ overlay.",
+  "license": "Apache-2.0",
+  "scripts": {
+    "postinstall": "npm --prefix structs-webapp/src ci --no-audit --no-fund",
+    "dev": "webpack serve --mode=development",
+    "build": "webpack --mode=production",
+    "check": "node bk/check.cjs",
+    "test": "node bk/check.cjs --strict",
+    "update:webapp": "git submodule update --remote structs-webapp && npm --prefix structs-webapp/src ci --no-audit --no-fund && npm run check"
+  },
+  "devDependencies": {
+    "webpack": "^5.109.2",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
+  }
+}

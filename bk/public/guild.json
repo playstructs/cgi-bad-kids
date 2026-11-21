@@ -1,0 +1,40 @@
+{
+  "guild": {
+    "schema_version": 1,
+    "id": "0-11",
+    "name": "Bad Kids",
+    "description": "Bad Kids Structs Guild",
+    "tag": "BAD",
+    "logo": "https://badkids.structs.zone/bk/img/bad-kids-logo.jpg",
+    "webapp": "badkids.structs.zone",
+    "website": "https://www.badkids.com",
+    "recruiting": {
+      "status": "open"
+    },
+    "socials": {
+      "bluesky": "",
+      "facebook": "",
+      "farcaster": "",
+      "instagram": "",
+      "twitch": "",
+      "x": "https://x.com/badkidsart",
+      "youtube": "",
+      "discord_contact": "",
+      "discord_server": "https://discord.com/invite/CUbNQh9bFC",
+      "telegram_contact": "",
+      "telegram_channel": ""
+    },
+    "denom": {
+      "6": "scowl",
+      "0": "uscowl"
+    },
+    "services": {
+      "guild_api": "https://beta.playstructs.com/api/",
+      "reactor_api": "https://public.testnet.structs.network/",
+      "client_websocket": "wss://public.testnet.structs.network:26657/websocket",
+      "grass_nats_websocket": "wss://beta.playstructs.com:1443",
+      "matrix": "https://matrix.beta.playstructs.com",
+      "explorer": ""
+    }
+  }
+}
