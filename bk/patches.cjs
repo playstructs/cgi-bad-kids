@@ -99,13 +99,11 @@ module.exports = {
   'js/api/InfluenceAPI.js': [
     ["this.apiUrl = '/api/influence';", guildApi('/influence')],
   ],
-  // Spectating a Sector Blitz raid (/?spectate=<planet>) reads the public raid snapshot.
+  // Read by the public Sector Blitz leaderboard (/sector-blitz), which waits here
+  // for the guild, and by spectating a raid (/?spectate=<planet>).
   'js/api/PublicSectorBlitzAPI.js': [
     ["this.apiUrl = '/api/public/sector-blitz';", guildApi('/public/sector-blitz')],
-  ],
-  // A spectator goes back to the public leaderboard, a page of the guild API's host, not this one.
-  'js/spectator/SpectatorMode.js': [
-    ["return '/sector-blitz';", "return new URL('/sector-blitz', __bk.guild.api).href;"],
+    ['    const response = await fetch(', '    await __bk.guild.ready;\n    const response = await fetch('],
   ],
 
   // Players' own pictures (bk/runtime/pfp.js): every portrait shows a player's
